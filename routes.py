@@ -9,7 +9,7 @@ from templates import HTML_TEMPLATE
 from video_player_template import VIDEO_PLAYER_TEMPLATE
 from thumbnails import get_thumbnail_base64, get_video_duration, format_duration, regenerate_all_thumbnails
 from progress import get_video_progress, get_all_progress, update_video_progress, get_progress_stats
-from config import AUTO_ADVANCE_TRIGGER_SECONDS, AUTO_ADVANCE_COUNTDOWN_SECONDS
+from config import AUTO_ADVANCE_TRIGGER_SECONDS, AUTO_ADVANCE_COUNTDOWN_SECONDS, APP_TITLE
 
 def register_routes(app):
     """
@@ -24,7 +24,8 @@ def register_routes(app):
                                     ruta_capitulos=CAPITULOS_PATH,
                                     obtener_archivos_video=obtener_archivos_video,
                                     obtener_archivos_video_carpeta=obtener_archivos_video_carpeta,
-                                    obtener_carpetas=obtener_carpetas)
+                                    obtener_carpetas=obtener_carpetas,
+                                    app_title=APP_TITLE)
 
     @app.route('/ver/<archivo>')
     def ver_video_principal(archivo):
@@ -136,7 +137,8 @@ def register_routes(app):
                                     total_videos=len(all_videos),
                                     video_list=all_videos,
                                     auto_advance_trigger_seconds=AUTO_ADVANCE_TRIGGER_SECONDS,
-                                    auto_advance_countdown_seconds=AUTO_ADVANCE_COUNTDOWN_SECONDS)
+                                    auto_advance_countdown_seconds=AUTO_ADVANCE_COUNTDOWN_SECONDS,
+                                    app_title=APP_TITLE)
 
     @app.route('/api/regenerate-thumbnails')
     def regenerate_thumbnails_api():

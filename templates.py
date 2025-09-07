@@ -8,7 +8,7 @@ HTML_TEMPLATE = """
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Call Of The NIGHT - Servidor Local</title>
+    <title>{{ app_title }} - Servidor Local</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
@@ -464,7 +464,7 @@ HTML_TEMPLATE = """
     
     <div class="container">
         <div class="header fade-in">
-            <h1><i class="fas fa-video"></i> Call Of The NIGHT</h1>
+            <h1><i class="fas fa-video"></i> {{ app_title }}</h1>
             <p class="subtitle">Servidor de Streaming Local</p>
         </div>
         

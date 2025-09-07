@@ -8,6 +8,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 # Configuración del servidor
+APP_TITLE = os.getenv('APP_TITLE', 'Call Of The NIGHT')
 HOST = os.getenv('HOST', '0.0.0.0')
 PORT = int(os.getenv('PORT', 5000))
 DEBUG = os.getenv('DEBUG', 'True').lower() == 'true'

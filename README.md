@@ -34,6 +34,9 @@ Un servidor de video streaming personalizado con interfaz estilo Netflix, diseñ
 ### Archivo `.env`
 
 ```env
+# Título de la aplicación
+APP_TITLE=Call Of The NIGHT
+
 # Puerto del servidor
 PORT=5000
 
@@ -102,6 +105,11 @@ Edita en `.env`:
 ```env
 AUTO_ADVANCE_TRIGGER_SECONDS=120  # 2 minutos antes del final
 AUTO_ADVANCE_COUNTDOWN_SECONDS=10 # 10 segundos de countdown
+```
+
+### Cambiar Título de la Aplicación
+```env
+APP_TITLE=Mi Servidor de Videos  # Cambiar el título
 ```
 
 ### Cambiar Puerto
